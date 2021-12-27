@@ -32,14 +32,15 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 </br>
 </br>
 #### 연도별 직무 관련 설문지 조사: 
-	- 2018: 업무환경 및 흥미
-	- 2019: 지식 및 성격
-	- 2020: 업무수행능력 및 가치관
+[2018: 업무환경 및 흥미](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2018%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
+</br>
+[2019: 지식 및 성격](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2019%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
+</br>
+[2020: 업무수행능력 및 가치관](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2020%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
 </br>
 </br>
-
 ### 2-2 설문지 내용(2018년, 2019년, 2020년)
-
+#### 설문지 조사 방식
 설문 조사는 리커트 척도 방식과 주관식 답변 조사로 진행되었으며, 설문지의 내용은 아래의 예와 같다.
 </br>
 </br>
@@ -49,20 +50,20 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 </p>
 </br>
 </br>
-
 #### - 주관식 답변 조사 방식
 <p align="center">
 	  <img src="https://user-images.githubusercontent.com/68809022/147454079-e13678e7-7a35-4457-92fd-89804ad67739.png" width="60%" height="60%"/>
 </p>
 </br>
 </br>
-
-#### 설문지내용
+</br>
+#### 설문지 문항
 [2018: 업무환경 및 흥미](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2018%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
 </br>
 [2019: 지식 및 성격](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2019%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
 </br>
 [2020: 업무수행능력 및 가치관](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2020%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
+</br>
 </br>
 ## 3. 데이터 전처리
 
