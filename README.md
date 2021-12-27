@@ -2,7 +2,6 @@
 
 <img src="https://user-images.githubusercontent.com/68809022/147449868-01bfe8e0-c4b9-46ff-9c02-467a784d7d22.png" width="70%" height="50%">
 
-----
 ## Introduction
 	- 개인의 성격, 역량, 능력을 설문지로 조사하여 직업을 추천해주는 모델입니다.
 
@@ -14,7 +13,6 @@
 - 5.[모델링](#5-모델링)
 - 6.[REVIEW](#6-REVIEW)
 
-----
 ## 1. 프로젝트 소개
 	1) KNOW(한국직업정보) 설문 데이터셋을 활용한 직업 추천 알고리즘 개발
 
