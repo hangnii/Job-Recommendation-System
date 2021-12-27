@@ -42,7 +42,7 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 
 ### 2-2 설문지 내용(2018년, 2019년, 2020년)
 #### 설문지 조사 방식
-설문 조사는 리커트 척도 방식과 주관식 답변 조사로 진행되었으며, 설문지의 내용은 아래의 예와 같다.
+설문 조사는 리커트 척도 방식과 주관식 답변 조사로 진행되었으며, 설문지의 내용은 아래의 예시와 같다.
 </br>
 #### - 리커트 척도 조사 방식
 <p align="center">
@@ -61,15 +61,20 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 </br>
 [2019: 지식 및 성격](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2019%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
 </br>
-[2020: 업무수행능력 및 가치관](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2020%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
+[2020: 업무수행능력 및 가치관](https://github.com/dss-nklkb-1th/ml-repo-idx column을 포함한 2/blob/main/data/2020%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
 </br>
 ## 3. 데이터 전처리
 ### 3-1. 데이터셋
-2018년도 데이터 설문 파일에는 **총 141개**의 column(문항)
-2019년도 데이터 설문 파일에는 **총 153개**의 column(문항)
-2020년도 데이터 설문 파일에는 **총 185개**의 column(문항)으로 구성되어 있다.
+제공된 파일들에선,
+
+2018년도 데이터 설문 파일에는 idx column을 포함한 **총 141개**의 column(문항)
+
+2019년도 데이터 설문 파일에는 idx column을 포함한 **총 153개**의 column(문항)
+
+2020년도 데이터 설문 파일에는 idx column을 포함한 **총 185개**의 column(문항)으로 구성되어 있다.
+
 <p align="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147457779-fed7c81e-0983-4203-9097-e83a2fe04922.png" width="100%" height="100%"/>
+	<img src = "https://user-images.githubusercontent.com/68809022/147472919-2abff91f-1e34-4fbf-a5ee-de4c055d3e0c.png" width = "100%" height "100%">
 </p>
 
 ### 3-2. 주요 컬럼 선택
@@ -104,7 +109,7 @@ LGBM  | 0.228653 | 0.091024
 
 Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난 성능을 보여주었다.
 
-하지만, 모든 분류기의 test score 가 train score보다 낮은 것으로 보아 과적합이 우려가 되지만, **정답라벨이 500개가 넘는 다는 것과**, **한 라벨 당 학습 데이터가 최대 16개 였던 것을 고려한다면** 나쁘지 않은 학습 결과라고 판단하였다.
+하지만, 모든 분류기의 test score 가 train score보다 낮은 것으로 보아 과적합이 우려가 되지만, **정답라벨이 500개가 넘는다는 것과**, **한 라벨 당 학습 데이터가 최대 16개 였던 것을 고려한다면** 나쁘지 않은 학습 결과라고 판단하였다.
 
 ***
 
@@ -122,44 +127,45 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 ***
 
 ### 5-3. Random Forest Classifier 성능 개선 작업
-1. Optimum **max_depth** value: 34
-<p align="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147464981-7eaae931-6e9c-4c63-a285-39df65b7362e.png" width = "100%" height="100%">
-</p>
-2. Optimum **n_estimator** value: 900
-<p align="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147465101-a1ba88c3-657c-4c41-b61f-df0774152348.png"  width = "100%" height="100%">
-</p>
-<p align="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147465207-b4081e03-4336-44d0-8500-36058af5da8a.png"  width = "100%" height="100%">
+1. Optimum **max_depth** value: **34**
+
+	Grid Search Cross Validation 방법을 이용하여 max_depth 범위를 [25, 40]으로 한 결과, **max_depth가 34일 때, test accuracy값이 0.5054406347180608**로 가장 좋은 결과값이 나왔다.
+
+2. Optimum **n_estimator** value: **900**
+
+	max_depth를 34로 설정한 후, n_estimator값을 100씩 변경하며 테스트해본 결과, **900**일 때 가장 좋은 결과값이 나왔다.
+
+<p align ="center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147472334-a9a31982-5919-427f-b2af-420573e41862.png" width = "100%" height = "100%">
 </p>
 
 ***
 
-### 5-4. 최종선택 : Random Forest Classifier(max_depth = 34, n_estimators = 900)
+### 5-4. 최종 모델 with Hyper Paramter: Random Forest Classifier(max_depth = 34, n_estimators = 900)
 <p align="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147465288-eb622aed-c2a1-44a1-b3a4-a174d782260d.png"  width = "100%" height="100%">
+	<img src = "https://user-images.githubusercontent.com/68809022/147465288-eb622aed-c2a1-44a1-b3a4-a174d782260d.png"  width = "60%" height="60%">
 </p>
 
-#### Accuracy : 0.6194690265486725
+#### 최종 모델 Accuracy : 0.6194690265486725
 
+### 5-5. 직업 추천 모델 :
+하나의 직업에 국한되어 있지 않고, 설문 조사에서 취합한 개개인의 역량에 적합한 직업의 다양한 가능성을 보여주기 위해
+
+최종모델에서 추천된 모델에서 상위 3개, 5개, 10개 데이터별로 묶어서 label 값이 포함되어 있는지 확인해보았다.
+<p align ="center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147474941-f4721bf8-f539-42a5-a06c-50e6c07f6af8.png" width = "100%" height="100%">
+</p>						
+
+최종모델에서 추천된 직업이 **상위 3개에 포함되어 있을 확률은 75%**, **상위 5개에 포함되어 있을 확률은 81%**, **상위 10개에 포함되어 있을 확률은 88%** 으로 확인되었다.
 
 ## 6.  추천시스템
-### 6-1 서비스화
+설문 조사들을 통하여 응시자의 개인 성격, 능력, 역량에 적합한 **직업 상위 10개를 추천**해준 후,
 
-설문 조사들을 통하여 응시자의 개인 성격, 능력, 역량에 의한 **직업 상위 10개를 추천**해준 후, 현직자가 평가한 업무 만족도와 직업 전망, 사회적 평판을 고려할 때, 추천된 **상위 10개의 직업에서 Best3**를 선정하여 알려주는 서비스를 구현하습니다.
+현직자가 평가한 업무 만족도와 직업 전망, 사회적 평판을 고려할 때, 추천된 **상위 10개의 직업에서 Best3**를 선정하여 알려주는 **서비스를 구현** 하였다.
 
-<p align="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147466959-359336f9-b190-4776-a48c-8b16812e442f.png" width = "60%" height="60%">
-</p>
 
-### 6-2. 서비스 이용
-
-1. [설문 조사 응시](https://docs.google.com/forms/d/1YA3iA2KJQQtdmrN7iGbOecF6bMXA4eYk75ls2teH5BA/edit?usp=drive_web)
-
-<p align = "center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147467781-7e9c55ac-d6c7-4137-82a5-52818ff56235.png" width = "50%" height = "50%">
-</p>
+### 6-1. 데이터 수집
+[설문 조사 응시](https://docs.google.com/forms/d/1YA3iA2KJQQtdmrN7iGbOecF6bMXA4eYk75ls2teH5BA/edit?usp=drive_web)
 
 
 ## 8. REVIEW
