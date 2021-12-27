@@ -23,7 +23,6 @@
 </br>
 
 ## 2. 데이터 개요
-
 ### 2-1. 데이터 출처 : 한국직업정보(Korea Network for Occupations and Workers; KNOW)시스템
 KNOW(한국직업정보) 재직자 조사는 한국고용정보원이 **청소년과 성인의 진로 및 경력 설계, 진로 상담, 구인, 구직** 등의 도움을 주기 위해 2001년부터 개발, 운영하고 있는 조사이다.
 </br>
@@ -38,24 +37,21 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 </br>
 [2020: 업무수행능력 및 가치관](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2020%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
 </br>
-</br>
-</br>
+***
+
 ### 2-2 설문지 내용(2018년, 2019년, 2020년)
 #### 설문지 조사 방식
 설문 조사는 리커트 척도 방식과 주관식 답변 조사로 진행되었으며, 설문지의 내용은 아래의 예와 같다.
-</br>
 </br>
 #### - 리커트 척도 조사 방식
 <p align="center">
 	<img src="https://user-images.githubusercontent.com/68809022/147454014-e5395674-796a-4e1a-889c-327aded94fb9.png" width="60%" height="60%"/>
 </p>
-</br>
 
 #### - 주관식 답변 조사 방식
 <p align="center">
 	  <img src="https://user-images.githubusercontent.com/68809022/147454079-e13678e7-7a35-4457-92fd-89804ad67739.png" width="60%" height="60%"/>
 </p>
-</br>
 
 ***
 
@@ -65,7 +61,6 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 [2019: 지식 및 성격](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2019%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
 </br>
 [2020: 업무수행능력 및 가치관](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2020%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
-</br>
 </br>
 ## 3. 데이터 전처리
 ### 3-1. 데이터셋
