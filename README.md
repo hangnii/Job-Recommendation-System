@@ -137,8 +137,8 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 	<p align ="center">
 		<img src = "https://user-images.githubusercontent.com/68809022/147472334-a9a31982-5919-427f-b2af-420573e41862.png" width = "100%" height = "100%">
 	</p>
-
 	
+	max_depth를 34로 설정한 후, n_estimators 값을 100씩 증가시키며 stratified 5-fold cross validation 결과(accuracy)를 비교해 보았다. 평균값은 900에서 최대로 나타났고, 표준편차는 300에서 가장 낮게 나타나긴 했지만 900에서 0.01456이라는 양호한 수치를 보이며 다시 극소를 이룬다. 따라서 n_estimators는 900일 때 가장 좋은 것으로 판단했다.
 	
 
 ***
