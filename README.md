@@ -24,7 +24,7 @@
 </br>
 
 ## 2. 데이터 개요
-### 2-1. 데이터 출처 : 한국직업정보(Korea Network for Occupations and Workers; KNOW)시스템
+### 🗃 2-1. 데이터 출처 : 한국직업정보(Korea Network for Occupations and Workers; KNOW)시스템
 KNOW(한국직업정보) 재직자 조사는 한국고용정보원이 **청소년과 성인의 진로 및 경력 설계, 진로 상담, 구인, 구직** 등의 도움을 주기 위해 2001년부터 개발, 운영하고 있는 조사이다.
 </br>
 </br>
@@ -41,7 +41,7 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 
 ***
 
-### 2-2 설문지 내용(2018년, 2019년, 2020년)
+### 🗃 2-2 설문지 내용(2018년, 2019년, 2020년)
 #### 설문지 조사 방식
 설문 조사는 리커트 척도 방식과 주관식 답변 조사로 진행되었으며, 설문지의 내용은 아래의 예시와 같다.
 #### - 리커트 척도 조사 방식
@@ -54,7 +54,7 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 	  <img src="https://user-images.githubusercontent.com/68809022/147454079-e13678e7-7a35-4457-92fd-89804ad67739.png" width="60%" height="60%"/>
 </p>
 
-### 2-3 설문 대상자
+### 🗃 2-3 설문 대상자
 매년 18,000 명의 재직자(530개의 직종)를 대상으로 설문 조사가 수행되었으며, DACON측에서 직업 라벨이 포함된 데이터(train set) 9,000개와 직업 라벨이 포함되지 않은 데이터(test set) 9,000개로 나눠서 제공하였다.
 
 ## 3. 데이터 전처리
@@ -88,11 +88,37 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 
 ## 4. 시각화 및 분석
 
+### 🛰️ 4-1. 년도별 응답자 직군
+![image](https://user-images.githubusercontent.com/68809022/147485971-ab898241-175f-450c-84be-4a3df7675db4.png)
+
+### 🛰️ 4-2. 직업 대분류별 임금근로자 연봉
+![image](https://user-images.githubusercontent.com/68809022/147486627-33f6a082-ff65-4b0f-99b5-6a93d895e3d4.png)
+
+### 🛰️ 4-2. 직업 대분류별 임금근로자 연봉 (한계값 설정)
+![image](https://user-images.githubusercontent.com/68809022/147486889-8471c6a8-22c0-4ca0-a912-73699a24d60f.png)
+
+### 🛰️ 4-3. 연도별 응답자 중, 고소득 직업
+![image](https://user-images.githubusercontent.com/68809022/147487627-53f80599-2c88-4914-b19a-2129b212012a.png)
+
+### 🛰️ 4-4. Reputation (수정중)
+![image](https://user-images.githubusercontent.com/68809022/147489392-9cc81882-fea7-4d1c-808f-4d1869755283.png)
+
+### 🛰️ 4-5. Income (수정중)
+![image](https://user-images.githubusercontent.com/68809022/147489446-8e5c434f-07c1-4473-b7a4-d42f181cbf50.png)
+
+### 🛰️ 4-6. Stability (수정중)
+![image](https://user-images.githubusercontent.com/68809022/147489476-8ed54952-6d61-41c4-8daf-92e0b2b2bad6.png)
+
+### 🛰️ 4-7. Satisfaction (수정중)
+![image](https://user-images.githubusercontent.com/68809022/147489499-7a9cdbc8-6991-4413-853e-6721646d4a1f.png)
+
+### 🛰️ 4-8. Prospects (수정중)
+![image](https://user-images.githubusercontent.com/68809022/147489524-4400ec87-be17-44b4-b9dd-bdb8cfd62b18.png)
 
 ## 5. 모델링
 ***
 
-### 5-1. Test Accuracy from 5 Classifiers
+### 🔩 5-1. Test Accuracy from 5 Classifiers
 Classifier<img width=200/>    | Train Score <img width=200/> | Test Score<img width=200/>
 ------------- | -------------| -------------
 Random Forest  | 1.000000 | 0.522756
@@ -107,7 +133,7 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 
 ***
 
-### 5-2. 교차 검증(Stratified 5-fold Cross Validation)
+### 🔩 5-2. 교차 검증(Stratified 5-fold Cross Validation)
 <p align = "center">
 	<img src = "https://user-images.githubusercontent.com/68809022/147464637-5ce0cdf3-c0ec-4eb9-9c97-641135cb8f78.png" width="80%" height="80%">
 </p>
@@ -121,14 +147,14 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 그래프에서 알 수 있듯이 Random Forest Classifer의 값이 다른 분류 모델들에 비해서 좋은 것을 확인 할 수 있다.
 ***
 
-### 5-3. Random Forest Classifier 성능 개선
-1. **max_depth** value: **34**
+### 🔩 5-3. Random Forest Classifier 성능 개선
+1. ⚙**max_depth** value: **34**
 
 	Grid Search Cross Validation 방법을 이용한 결과, 
 	
 	**max_depth가 34일 때, test accuracy 값이 0.505440634**로 가장 좋은 결과 값이 나왔다.
 
-2. **n_estimator** value: **900**
+2. ⚙**n_estimator** value: **900**
 
 	max_depth를 34로 설정한 후, n_estimator 값을 100씩 변경하며 테스트한 결과, 
 	
@@ -143,7 +169,7 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 
 ***
 
-### 5-4. 최종 모델 with Hyper Paramter: Random Forest Classifier(max_depth = 34, n_estimators = 900)
+### 🔩 5-4. 최종 모델 with Hyper Paramter: Random Forest Classifier(max_depth = 34, n_estimators = 900)
 <p align="center">
 	<img src = "https://user-images.githubusercontent.com/68809022/147465288-eb622aed-c2a1-44a1-b3a4-a174d782260d.png"  width = "60%" height="60%">
 </p>
@@ -152,7 +178,7 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 
 ***
 
-### 5-5. 직업 추천 모델 :
+### 🔩 5-5. 직업 추천 모델 :
 응답자의 특성에 적합한 직업을 한가지로 국한시키지 않고, 다양한 가능성을 보여주기 위해 최종모델에서 산출된 결과를 상위 3개, 5개, 10개 단위로 출력해보았다.
 
 각각의 경우에서 산출된 결과에 실제 직업 라벨(정답 라벨)이 포함된 경우는 **상위 3개에 포함되어 있을 확률: 75%**, **상위 5개에 포함되어 있을 확률: 81%**, **상위 10개에 포함되어 있을 확률: 88%** 로 확인되었다.
@@ -170,7 +196,7 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 
 ***
 
-### 6-1. 데이터 수집
+### 📜 6-1. 데이터 수집
 
 직접 제작한 설문지(123문항)는 아래의 카테고리에 해당하는 문제들로 구성되어 있다. [설문 조사 응시](https://docs.google.com/forms/d/1YA3iA2KJQQtdmrN7iGbOecF6bMXA4eYk75ls2teH5BA/edit?usp=drive_web)
 
@@ -192,7 +218,7 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 
 ***
 
-### 6-2. Radar Chart를 통한 시각화
+### 📜 6-2. Radar Chart를 통한 시각화
 추천된 상위 10개의 직업에서 현직자가 아래의 요소들을 고려했을때 가장 좋은 직업 Best3를 Radar Chart를 활용하여 표현하엿다.
 
 	- 업무 만족도(satisfaction)
