@@ -87,9 +87,12 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 ### 3-10. 데이터셋
 
 ## 4. 시각화 및 분석
+
+
+## 5. 모델링
 ***
 
-### 4-1. Test Accuracy
+### 5-1. Test Accuracy from 5 Classifiers
 Classifier<img width=200/>    | Train Score <img width=200/> | Test Score<img width=200/>
 ------------- | -------------| -------------
 Random Forest  | 1.000000 | 0.522756
@@ -104,20 +107,38 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 
 ***
 
-### 4-2. 교차 검증(Stratified 5-fold Cross Validation)
-<img src="https://user-images.githubusercontent.com/68809022/147464213-7cf6b6a1-8bb0-4bfb-9e2c-73e19603a969.png" width="100%" height="100%">
+### 5-2. 교차 검증(Stratified 5-fold Cross Validation)
+<p align = "center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147464637-5ce0cdf3-c0ec-4eb9-9c97-641135cb8f78.png" width="80%" height="80%">
+</p>
 
 수행 결과 대부분의 모델에서 **정확도의 표준편차가 0.01이하** 인 것으로 보아 **과적합이 아닌 것으로 판단**하였다.
 
 <p align = "center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147464357-930d56a3-c766-49f3-80a1-91749c41290b.png" width = "100%" height = "100%">
+	<img src = "https://user-images.githubusercontent.com/68809022/147464357-930d56a3-c766-49f3-80a1-91749c41290b.png" width = "80%" height = "80%">
 </p>
 
 ***
 
-### 4-3. 
+### 5-3. Random Forest Classifier 성능 개선 작업
+1. Optimum **max_depth** value: 34
+<p align="center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147464981-7eaae931-6e9c-4c63-a285-39df65b7362e.png" width = "100% height="100%">
+</p>
+2. Optimum **n_estimator** value: 900
+<p align="center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147465101-a1ba88c3-657c-4c41-b61f-df0774152348.png"  width = "100% height="100%">
+</p>
+<p align="center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147465207-b4081e03-4336-44d0-8500-36058af5da8a.png"  width = "100% height="100%">
+</p>
+***
 
-## 5. 모델링
+### 5-4. 최종선택 : Random Forest Classifier(max_depth = 34, n_estimators = 900)
+<p align="center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147465288-eb622aed-c2a1-44a1-b3a4-a174d782260d.png"  width = "100% height="100%">
+</p>
+#### Accuracy : 0.6194690265486725
 
 ## 6.  REVIEW
 
