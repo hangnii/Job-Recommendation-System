@@ -55,15 +55,7 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 	  <img src="https://user-images.githubusercontent.com/68809022/147454079-e13678e7-7a35-4457-92fd-89804ad67739.png" width="60%" height="60%"/>
 </p>
 
-***
 
-#### - 설문지 문항
-[2018: 업무환경 및 흥미](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2018%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
-</br>
-[2019: 지식 및 성격](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2019%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
-</br>
-[2020: 업무수행능력 및 가치관](https://github.com/dss-nklkb-1th/ml-repo-idx column을 포함한 2/blob/main/data/2020%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
-</br>
 ## 3. 데이터 전처리
 ### 3-1. 데이터셋
 제공된 파일들에선,
@@ -108,9 +100,9 @@ AdaBoost  | 0.007274 | 0.005689
 Logistic Regression  | 0.408918 | 0.248420
 LGBM  | 0.228653 | 0.091024
 
-Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난 성능을 보여주었다.
+Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난 성능을 보여주었다.
 
-하지만, 모든 분류기의 test score가 train score보다 낮은 것으로 보아 과적합이 우려가 되지만, **정답라벨이 500개가 넘는다는 것과**, **한 라벨 당 학습 데이터가 최대 16개였던 것을 고려한다면** 나쁘지 않은 학습 결과라고 판단하였다.
+하지만 모든 분류기의 test score가 train score보다 낮은 것으로 보아 과적합이 우려 되지만, **정답 라벨이 530개가 넘는다는 것과**, **한 라벨 당 학습 데이터가 최대 16개였던 것을 고려한다면** 나쁘지 않은 학습 결과라고 판단하였다.
 
 ***
 
@@ -128,13 +120,17 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 ***
 
 ### 5-3. Random Forest Classifier 성능 개선 작업
-1. Optimum **max_depth** value: **34**
+1. **max_depth** value: **34**
 
-	Grid Search Cross Validation 방법을 이용하여 max_depth 범위를 [25, 40]으로 한 결과, **max_depth가 34일 때, test accuracy 값이 0.5054406347180608**로 가장 좋은 결과 값이 나왔다.
+	Grid Search Cross Validation 방법을 이용한 결과, 
+	
+	**max_depth가 34일 때, test accuracy 값이 0.505440634**로 가장 좋은 결과 값이 나왔다.
 
-2. Optimum **n_estimator** value: **900**
+2. **n_estimator** value: **900**
 
-	max_depth를 34로 설정한 후, n_estimator 값을 100씩 변경하며 테스트해본 결과, **900**일 때 가장 좋은 결과 값이 나왔다.
+	max_depth를 34로 설정한 후, n_estimator 값을 100씩 변경하며 테스트한 결과, 
+	
+	**900**일 때 가장 좋은 결과 값이 나왔다.
 
 <p align ="center">
 	<img src = "https://user-images.githubusercontent.com/68809022/147472334-a9a31982-5919-427f-b2af-420573e41862.png" width = "100%" height = "100%">
