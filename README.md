@@ -1,4 +1,4 @@
-# ML Job Recommendation (머신러닝 기반 직업 추천 알고리즘) [2021.12.08 ~ 2021.12.21]
+# ML Job Recommendation (머신러닝 기반 직업 추천 알고리즘)
 <p align="center">
 	<img src="https://user-images.githubusercontent.com/68809022/147449868-01bfe8e0-c4b9-46ff-9c02-467a784d7d22.png" width="70%" height="50%">
 </p>
@@ -45,17 +45,20 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 </br>
 #### - 리커트 척도 조사 방식
 <p align="center">
-	<img src="https://user-images.githubusercontent.com/68809022/147454014-e5395674-796a-4e1a-889c-327aded94fb9.png" width="70%" height="70%"/>
+	<img src="https://user-images.githubusercontent.com/68809022/147454014-e5395674-796a-4e1a-889c-327aded94fb9.png" width="60%" height="60%"/>
 </p>
 </br>
 </br>
 
 #### - 주관식 답변 조사 방식
 <p align="center">
-	  <img src="https://user-images.githubusercontent.com/68809022/147454079-e13678e7-7a35-4457-92fd-89804ad67739.png" width="70%" height="70%"/>
+	  <img src="https://user-images.githubusercontent.com/68809022/147454079-e13678e7-7a35-4457-92fd-89804ad67739.png" width="60%" height="60%"/>
 </p>
 </br>
 </br>
+
+#### 
+
 
 ## 3. 데이터 전처리
 
