@@ -87,7 +87,9 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 ### 3-10. 데이터셋
 
 ## 4. 시각화 및 분석
-### Test Accuracy
+***
+
+### 4-1. Test Accuracy
 Classifier<img width=200/>    | Train Score <img width=200/> | Test Score<img width=200/>
 ------------- | -------------| -------------
 Random Forest  | 1.000000 | 0.522756
@@ -99,6 +101,21 @@ LGBM  | 0.228653 | 0.091024
 Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난 성능을 보여주었다.
 
 하지만, 모든 분류기의 test score 가 train score보다 낮은 것으로 보아 과적합이 우려가 되지만, **정답라벨이 500개가 넘는 다는 것과**, **한 라벨 당 학습 데이터가 최대 16개 였던 것을 고려한다면** 나쁘지 않은 학습 결과라고 판단하였다.
+
+***
+
+### 4-2. 교차 검증(Stratified 5-fold Cross Validation)
+<img src="https://user-images.githubusercontent.com/68809022/147464213-7cf6b6a1-8bb0-4bfb-9e2c-73e19603a969.png" width="100%" height="100%">
+
+수행 결과 대부분의 모델에서 **정확도의 표준편차가 0.01이하** 인 것으로 보아 **과적합이 아닌 것으로 판단**하였다.
+
+<p align = "center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147464357-930d56a3-c766-49f3-80a1-91749c41290b.png" width = "100%" height = "100%">
+</p>
+
+***
+
+### 4-3. 
 
 ## 5. 모델링
 
