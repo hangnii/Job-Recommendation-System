@@ -44,7 +44,6 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 ### 2-2 설문지 내용(2018년, 2019년, 2020년)
 #### 설문지 조사 방식
 설문 조사는 리커트 척도 방식과 주관식 답변 조사로 진행되었으며, 설문지의 내용은 아래의 예시와 같다.
-</br>
 #### - 리커트 척도 조사 방식
 <p align="center">
 	<img src="https://user-images.githubusercontent.com/68809022/147454014-e5395674-796a-4e1a-889c-327aded94fb9.png" width="60%" height="60%"/>
@@ -55,6 +54,8 @@ KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 �
 	  <img src="https://user-images.githubusercontent.com/68809022/147454079-e13678e7-7a35-4457-92fd-89804ad67739.png" width="60%" height="60%"/>
 </p>
 
+### 2-3 설문 대상자
+매년 18,000 명의 재직자(530개의 직종)를 대상으로 설문 조사가 수행되었으며, DACON측에서 직업 라벨이 포함된 데이터(train set) 9,000개와 직업 라벨이 포함되지 않은 데이터(test set) 9,000개로 나눠서 제공하였다.
 
 ## 3. 데이터 전처리
 ### 3-1. 데이터셋
@@ -117,9 +118,10 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 	<img src = "https://user-images.githubusercontent.com/68809022/147464357-930d56a3-c766-49f3-80a1-91749c41290b.png" width = "80%" height = "80%">
 </p>
 
+그래프에서 알 수 있듯이 Random Forest Classifer의 값이 다른 분류 모델들에 비해서 좋은 것을 확인 할 수 있다.
 ***
 
-### 5-3. Random Forest Classifier 성능 개선 작업
+### 5-3. Random Forest Classifier 성능 개선
 1. **max_depth** value: **34**
 
 	Grid Search Cross Validation 방법을 이용한 결과, 
@@ -132,9 +134,12 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 	
 	**900**일 때 가장 좋은 결과 값이 나왔다.
 
-<p align ="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147472334-a9a31982-5919-427f-b2af-420573e41862.png" width = "100%" height = "100%">
-</p>
+	<p align ="center">
+		<img src = "https://user-images.githubusercontent.com/68809022/147472334-a9a31982-5919-427f-b2af-420573e41862.png" width = "100%" height = "100%">
+	</p>
+
+	
+	
 
 ***
 
@@ -148,32 +153,38 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 ***
 
 ### 5-5. 직업 추천 모델 :
-응답자의 특성에 적합한 직업을 한가지로 국한시키지 않고, 다양한 가능성을 보여주기 위해 
+응답자의 특성에 적합한 직업을 한가지로 국한시키지 않고, 다양한 가능성을 보여주기 위해 최종모델에서 산출된 결과를 상위 3개, 5개, 10개 단위로 출력해보았다.
 
-최종모델에서 산출된 결과를 상위 3개, 5개, 10개 단위로 출력해보았다.
-
-각각의 경우에서 산출된 결과에 실제 직업 라벨(정답 라벨)이 포함된 경우는 
-
-**상위 3개에 포함되어 있을 확률: 75%**, **상위 5개에 포함되어 있을 확률: 81%**, **상위 10개에 포함되어 있을 확률: 88%** 로 확인되었다.
+각각의 경우에서 산출된 결과에 실제 직업 라벨(정답 라벨)이 포함된 경우는 **상위 3개에 포함되어 있을 확률: 75%**, **상위 5개에 포함되어 있을 확률: 81%**, **상위 10개에 포함되어 있을 확률: 88%** 로 확인되었다.
 
 <p align ="center">
 	<img src = "https://user-images.githubusercontent.com/68809022/147474941-f4721bf8-f539-42a5-a06c-50e6c07f6af8.png" width = "100%" height="100%">
 </p>						
 
-
+추천된 다양한 직업을 보여주기 위해 상위 10개를 출력해주는 모델을 선택하여 추천시스템을 구현하였다.
 
 ## 6.  추천시스템
-설문 조사들을 통하여 응시자의 개인 성격, 능력, 역량에 적합한 **직업 상위 10개를 추천**해준 후,
+설문 조사 결과를 통하여 응시자의 성격, 능력, 역량에 적합한 **직업 상위 10개를 추천**해준 후,
 
-현직자가 평가한 업무 만족도와 직업 전망, 사회적 평판을 고려할 때, 추천된 **상위 10개의 직업에서 Best3**를 선정하여 알려주는 **서비스를 구현** 하였다.
+**추천된 상위 10개의 직업**에서 현직자가 업무 만족도, 직업 전망, 사회적 평판 등을 고려했을 때 **가장 좋은 Best3 직업**을 알려주는 서비스를 구현하였다.
 
 ***
 
 ### 6-1. 데이터 수집
 
-총 123개의 문항으로 구성된 설문지를 직접 만들었으며, 아래의 설문지에는 총 9가지의 섹션으로 "업무 환경", "물리적 환경", "업무 특성", "업무에 대한 흥미", "본인의 성격", "지식 역량", "업무 수행 능력", "본인의 가치관", "종합(근무하고 싶은 업종, 학력, 직업 선택에 있어서 중요한 요소, 등)"에 관련된 질문들로 구성되어 있다.
+직접 제작한 설문지(123문항)는 아래의 카테고리에 해당하는 문제들로 구성되어 있다. [설문 조사 응시](https://docs.google.com/forms/d/1YA3iA2KJQQtdmrN7iGbOecF6bMXA4eYk75ls2teH5BA/edit?usp=drive_web)
 
-[설문 조사 응시](https://docs.google.com/forms/d/1YA3iA2KJQQtdmrN7iGbOecF6bMXA4eYk75ls2teH5BA/edit?usp=drive_web)
+	- "업무 환경"
+	- "물리적 환경"
+	- "업무 특성"
+	- "업무에 대한 흥미"
+	- "본인의 성격"
+	- "지식 역량"
+	- "업무 수행 능력"
+	- "본인의 가치관"
+	- "종합 질문(근무하고 싶은 업종, 학력, 직업 선택에 있어서 중요한 요소, 등)"
+	
+
 
 <p align="center">
 	<img src = "https://user-images.githubusercontent.com/68809022/147476727-5f4ddb0c-9cd5-40e7-98fe-bbc28ebe06fc.png" width = "100%" height="100%">
