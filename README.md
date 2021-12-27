@@ -109,7 +109,7 @@ LGBM  | 0.228653 | 0.091024
 
 Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난 성능을 보여주었다.
 
-하지만, 모든 분류기의 test score 가 train score보다 낮은 것으로 보아 과적합이 우려가 되지만, **정답라벨이 500개가 넘는다는 것과**, **한 라벨 당 학습 데이터가 최대 16개 였던 것을 고려한다면** 나쁘지 않은 학습 결과라고 판단하였다.
+하지만, 모든 분류기의 test score가 train score보다 낮은 것으로 보아 과적합이 우려가 되지만, **정답라벨이 500개가 넘는다는 것과**, **한 라벨 당 학습 데이터가 최대 16개였던 것을 고려한다면** 나쁘지 않은 학습 결과라고 판단하였다.
 
 ***
 
@@ -118,7 +118,7 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 	<img src = "https://user-images.githubusercontent.com/68809022/147464637-5ce0cdf3-c0ec-4eb9-9c97-641135cb8f78.png" width="80%" height="80%">
 </p>
 
-수행 결과 대부분의 모델에서 **정확도의 표준편차가 0.01이하** 인 것으로 보아 **과적합이 아닌 것으로 판단**하였다.
+수행 결과 대부분 모델에서 **정확도의 표준편차가 0.01 이하** 인 것으로 보아 **과적합이 아닌 것으로 판단**하였다.
 
 <p align = "center">
 	<img src = "https://user-images.githubusercontent.com/68809022/147464357-930d56a3-c766-49f3-80a1-91749c41290b.png" width = "80%" height = "80%">
@@ -129,11 +129,11 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 ### 5-3. Random Forest Classifier 성능 개선 작업
 1. Optimum **max_depth** value: **34**
 
-	Grid Search Cross Validation 방법을 이용하여 max_depth 범위를 [25, 40]으로 한 결과, **max_depth가 34일 때, test accuracy값이 0.5054406347180608**로 가장 좋은 결과값이 나왔다.
+	Grid Search Cross Validation 방법을 이용하여 max_depth 범위를 [25, 40]으로 한 결과, **max_depth가 34일 때, test accuracy 값이 0.5054406347180608**로 가장 좋은 결과 값이 나왔다.
 
 2. Optimum **n_estimator** value: **900**
 
-	max_depth를 34로 설정한 후, n_estimator값을 100씩 변경하며 테스트해본 결과, **900**일 때 가장 좋은 결과값이 나왔다.
+	max_depth를 34로 설정한 후, n_estimator 값을 100씩 변경하며 테스트해본 결과, **900**일 때 가장 좋은 결과 값이 나왔다.
 
 <p align ="center">
 	<img src = "https://user-images.githubusercontent.com/68809022/147472334-a9a31982-5919-427f-b2af-420573e41862.png" width = "100%" height = "100%">
@@ -158,7 +158,7 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 	<img src = "https://user-images.githubusercontent.com/68809022/147474941-f4721bf8-f539-42a5-a06c-50e6c07f6af8.png" width = "100%" height="100%">
 </p>						
 
-최종모델에서 추천된 직업이 **상위 3개에 포함되어 있을 확률은 75%**, **상위 5개에 포함되어 있을 확률은 81%**, **상위 10개에 포함되어 있을 확률은 88%** 으로 확인되었다.
+최종모델에서 추천된 직업이 **상위 3개에 포함되어 있을 확률은 75%**, **상위 5개에 포함되어 있을 확률은 81%**, **상위 10개에 포함되어 있을 확률은 88%** 로 확인되었다.
 
 ## 6.  추천시스템
 설문 조사들을 통하여 응시자의 개인 성격, 능력, 역량에 적합한 **직업 상위 10개를 추천**해준 후,
