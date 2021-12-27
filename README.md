@@ -13,7 +13,8 @@
 - 3.[데이터 전처리](#3-데이터-전처리)
 - 4.[시각화 및 분석](#4-시각화-및-분석)
 - 5.[모델링](#5-모델링)
-- 6.[REVIEW](#6-REVIEW)
+- 6.[추천시스템](#6-추천시스템)
+- 7.[REIVEW](#7-REVIEW)
 
 ----
 ## 1. 프로젝트 소개
@@ -123,26 +124,46 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 ### 5-3. Random Forest Classifier 성능 개선 작업
 1. Optimum **max_depth** value: 34
 <p align="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147464981-7eaae931-6e9c-4c63-a285-39df65b7362e.png" width = "100% height="100%">
+	<img src = "https://user-images.githubusercontent.com/68809022/147464981-7eaae931-6e9c-4c63-a285-39df65b7362e.png" width = "100%" height="100%">
 </p>
 2. Optimum **n_estimator** value: 900
 <p align="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147465101-a1ba88c3-657c-4c41-b61f-df0774152348.png"  width = "100% height="100%">
+	<img src = "https://user-images.githubusercontent.com/68809022/147465101-a1ba88c3-657c-4c41-b61f-df0774152348.png"  width = "100%" height="100%">
 </p>
 <p align="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147465207-b4081e03-4336-44d0-8500-36058af5da8a.png"  width = "100% height="100%">
+	<img src = "https://user-images.githubusercontent.com/68809022/147465207-b4081e03-4336-44d0-8500-36058af5da8a.png"  width = "100%" height="100%">
 </p>
 
 ***
 
 ### 5-4. 최종선택 : Random Forest Classifier(max_depth = 34, n_estimators = 900)
 <p align="center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147465288-eb622aed-c2a1-44a1-b3a4-a174d782260d.png"  width = "100% height="100%">
+	<img src = "https://user-images.githubusercontent.com/68809022/147465288-eb622aed-c2a1-44a1-b3a4-a174d782260d.png"  width = "100%" height="100%">
 </p>
 
 #### Accuracy : 0.6194690265486725
 
-## 6.  REVIEW
+
+## 6.  추천시스템
+### 6-1 서비스화
+
+설문 조사들을 통하여 응시자의 개인 성격, 능력, 역량에 의한 **직업 상위 10개를 추천**해준 후, 현직자가 평가한 업무 만족도와 직업 전망, 사회적 평판을 고려할 때, 추천된 **상위 10개의 직업에서 Best3**를 선정하여 알려주는 서비스를 구현하습니다.
+
+<p align="center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147466959-359336f9-b190-4776-a48c-8b16812e442f.png" width = "60%" height="60%">
+</p>
+
+### 6-2. 서비스 이용
+
+1. [설문 조사 응시](https://docs.google.com/forms/d/1YA3iA2KJQQtdmrN7iGbOecF6bMXA4eYk75ls2teH5BA/edit?usp=drive_web)
+
+<p align = "center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147467781-7e9c55ac-d6c7-4137-82a5-52818ff56235.png" width = "50%" height = "50%">
+</p>
+
+
+## 8. REVIEW
+
 
 ## 역할
 
