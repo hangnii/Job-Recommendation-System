@@ -1,11 +1,26 @@
-# Job Recommendation
+# ML Job Recommendation (머신러닝 기반 직업 추천 알고리즘) [2021.12.08 ~ 2021.12.21]
 ![image](https://user-images.githubusercontent.com/68809022/147449868-01bfe8e0-c4b9-46ff-9c02-467a784d7d22.png)
-
-
-# ML Job Recommendation(직업 추천 알고리즘) [2021.12.08 ~ 2021.12.21]
 ----
+## Introduction
 
-![image](https://user-images.githubusercontent.com/68809022/145149254-b56ebea3-aadb-4d13-b2bc-6b2ee01afb5a.png)
+## Contents
+
+
+----
+## 프로젝트 배경
+
+## 데이터 개요
+
+## 데이터 전처리
+
+## 시각화 및 분석
+
+## 모델링
+
+## REVIEW
+
+## 역할
+
 
 ### **한국직업정보시스템(Korea Network for Occupations and Workers; KNOW)**
 
