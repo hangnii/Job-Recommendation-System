@@ -1,5 +1,7 @@
 # ML Job Recommendation (머신러닝 기반 직업 추천 알고리즘) [2021.12.08 ~ 2021.12.21]
-![image](https://user-images.githubusercontent.com/68809022/147449868-01bfe8e0-c4b9-46ff-9c02-467a784d7d22.png)
+
+<img src="https://user-images.githubusercontent.com/68809022/147449868-01bfe8e0-c4b9-46ff-9c02-467a784d7d22.png" width="70%" height="50%">
+
 ----
 ## Introduction
 
