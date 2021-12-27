@@ -173,6 +173,10 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 
 [설문 조사 응시](https://docs.google.com/forms/d/1YA3iA2KJQQtdmrN7iGbOecF6bMXA4eYk75ls2teH5BA/edit?usp=drive_web)
 
+<p align="center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147476727-5f4ddb0c-9cd5-40e7-98fe-bbc28ebe06fc.png" width = "100%" height="100%">
+</p>
+
 ***
 
 ### 6-2. Radar Chart를 통한 시각화
