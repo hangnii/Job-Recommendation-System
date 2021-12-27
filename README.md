@@ -132,12 +132,14 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 <p align="center">
 	<img src = "https://user-images.githubusercontent.com/68809022/147465207-b4081e03-4336-44d0-8500-36058af5da8a.png"  width = "100% height="100%">
 </p>
+
 ***
 
 ### 5-4. 최종선택 : Random Forest Classifier(max_depth = 34, n_estimators = 900)
 <p align="center">
 	<img src = "https://user-images.githubusercontent.com/68809022/147465288-eb622aed-c2a1-44a1-b3a4-a174d782260d.png"  width = "100% height="100%">
 </p>
+
 #### Accuracy : 0.6194690265486725
 
 ## 6.  REVIEW
