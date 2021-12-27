@@ -166,7 +166,7 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 ## 6.  추천시스템
 설문 조사 결과를 통하여 응시자의 성격, 능력, 역량에 적합한 **직업 상위 10개를 추천**해준 후,
 
-**추천된 상위 10개의 직업**에서 현직자가 업무 만족도, 직업 전망, 사회적 평판 등을 고려했을 때 **가장 좋은 Best3 직업**을 알려주는 서비스를 구현하였다.
+해당 리스트에서 현직자가 업무 만족도, 직업 전망, 사회적 평판 등을 고려했을 때 **가장 좋은 Best3 직업**을 알려주는 서비스를 구현하였다.
 
 ***
 
@@ -193,12 +193,24 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 ***
 
 ### 6-2. Radar Chart를 통한 시각화
-추천된 직업 리스트 중 현직자가 추천하는 best3에 대하여 평가한 업무 만족도(satisfaction), 직업 전망(prospects), 사회적 평판(reputation), 수입(income), 직업의 안정성(stability)를 Radar Chart를 통하여 결과물을 표현하였다.
+추천된 상위 10개의 직업에서 현직자가 아래의 요소들을 고려했을때 가장 좋은 직업 Best3를 Radar Chart를 활용하여 표현하엿다.
+
+	- 업무 만족도(satisfaction)
+	- 직업 전망(prospects)
+	- 사회적 평판(reputation)
+	- 수입(income)
+	- 직업의 안정성(stability)
+
+
+</br>
+
+왼쪽: 추천된 상위 10개의 직업, 오른쪽: 현직자가 뽑은 Best3
+
 <p align = "center">
-	<img src = "https://user-images.githubusercontent.com/68809022/147476563-8497b9de-07ff-4a74-aefd-71f12547a7f5.png" width = "60%" height = "60%">
+	<img src = "https://user-images.githubusercontent.com/68809022/147483604-e5ad200f-395e-4e87-8e21-a04242f1644b.png" width = "90%" height = "90%">
 </p>
 
-## 8. REVIEW
+## 7. REVIEW
 
 
 ## 역할
