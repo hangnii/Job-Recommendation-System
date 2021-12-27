@@ -30,14 +30,17 @@ KNOW(한국직업정보) 재직자 조사는 한국고용정보원이 **청소�
 </br>
 KNOW 조사는 다양한 직업에 종사하고 있는 재직자에 대하여 매년 다른 주제로 직무 관련 조사를 수행하고 있으며, 최근 3년에는 다음과 같은 내용으로 설문조사가 진행되었다.
 </br>
-</br>
+
 #### 연도별 직무 관련 설문지 조사: 
 [2018: 업무환경 및 흥미](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2018%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
 </br>
+
 [2019: 지식 및 성격](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2019%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
 </br>
+
 [2020: 업무수행능력 및 가치관](https://github.com/dss-nklkb-1th/ml-repo-2/blob/main/data/2020%EB%85%84_KNOW_%EC%9E%AC%EC%A7%81%EC%9E%90%EC%A1%B0%EC%82%AC_%EC%84%A4%EB%AC%B8%EC%A7%80.pdf)
 </br>
+
 ***
 
 ### 2-2 설문지 내용(2018년, 2019년, 2020년)
