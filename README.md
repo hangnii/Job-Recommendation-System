@@ -148,6 +148,8 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 
 #### 최종 모델 Accuracy : 0.6194690265486725
 
+***
+
 ### 5-5. 직업 추천 모델 :
 하나의 직업에 국한되어 있지 않고, 설문 조사에서 취합한 개개인의 역량에 적합한 직업의 다양한 가능성을 보여주기 위해
 
@@ -163,10 +165,21 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가상 뛰어난
 
 현직자가 평가한 업무 만족도와 직업 전망, 사회적 평판을 고려할 때, 추천된 **상위 10개의 직업에서 Best3**를 선정하여 알려주는 **서비스를 구현** 하였다.
 
+***
 
 ### 6-1. 데이터 수집
+
+총 123개의 문항으로 구성된 설문지를 직접 만들었으며, 아래의 설문지에는 총 9가지의 섹션으로 "업무 환경", "물리적 환경", "업무 특성", "업무에 대한 흥미", "본인의 성격", "지식 역량", "업무 수행 능력", "본인의 가치관", "종합(근무하고 싶은 업종, 학력, 직업 선택에 있어서 중요한 요소, 등)"에 관련된 질문들로 구성되어 있다.
+
 [설문 조사 응시](https://docs.google.com/forms/d/1YA3iA2KJQQtdmrN7iGbOecF6bMXA4eYk75ls2teH5BA/edit?usp=drive_web)
 
+***
+
+### 6-2. Radar Chart를 통한 시각화
+추천된 직업 리스트 중 현직자가 추천하는 best3에 대하여 평가한 업무 만족도(satisfaction), 직업 전망(prospects), 사회적 평판(reputation), 수입(income), 직업의 안정성(stability)를 Radar Chart를 통하여 결과물을 표현하였다.
+<p align = "center">
+	<img src = "https://user-images.githubusercontent.com/68809022/147476563-8497b9de-07ff-4a74-aefd-71f12547a7f5.png" width = "60%" height = "60%">
+</p>
 
 ## 8. REVIEW
 
