@@ -90,7 +90,7 @@ DACON측에서 직업 라벨을 포함하여 제공한 25,000여 명의 설문�
 
 - i. 통계 분석 기반
 	<p align ="center">
-		<img src = "https://user-images.githubusercontent.com/68809022/147523739-da75b6a9-a838-4ab7-83f5-d516c7fd6464.png" width = "60%" height = "60%">
+		<img src = "https://user-images.githubusercontent.com/68809022/147523739-da75b6a9-a838-4ab7-83f5-d516c7fd6464.png" width = "90%" height = "90%">
 	</p>
 	
 	- 같은 직업을 가진 재직자들 간 응답이 유사했던 문항 위주로 선택 시도
