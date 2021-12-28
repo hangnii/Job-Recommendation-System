@@ -310,7 +310,7 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 	- 업무 만족도(satisfaction)
 	- 직업 전망(prospects)
 	- 사회적 평판(reputation)
-	- 수입(income)
+	- 근로소득(income)
 	- 직업의 안정성(stability)
 
 
@@ -322,15 +322,19 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 	<img src = "https://user-images.githubusercontent.com/68809022/147483604-e5ad200f-395e-4e87-8e21-a04242f1644b.png" width = "90%" height = "90%">
 </p>
 
+</br>
+</br>
+
 ## 7. REVIEW
 ### 한계점
 	- 주관식으로 답한 문항에서의 부족한 자연어 처리
+	
+	- 데이터 부족으로 인해, 각 직업을 일반화하는데 어려움 존재
 	
 	- 설문 답변들이 재직자 기반으로 조사한 결과이기 때문에, 구직자 입장에서의 답변과 완벽히 매칭되지 않는다는 한계
 	
 	- 데이터 부족으로 인해, 직업 추천시 응답자의 특성을 완전히 반영하지 못하는 문제 존재
 	
-	- 데이터 부족으로 인해, 각 직업을 일반화하는데 어려움 존재
 
 ## Team
 - 강승완
