@@ -179,11 +179,18 @@ LGBM  | 0.228653 | 0.091024
 
 Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난 성능을 보여주었다.
 
-하지만 모든 분류기의 test score가 train score보다 낮은 것으로 보아 과적합이 우려 되지만, **정답 라벨이 500개가 넘는다는 것과**, **한 라벨 당 학습 데이터가 최대 16개였던 것을 고려한다면** 나쁘지 않은 학습 결과라고 판단하였다.
+<br/>
+
+전반적으로 Accuracy score가 너무 낮은 것 아닌가하는 의문이 들 수도 있으나,
+
+사실 **정답 라벨이 500개가 넘기 때문에** 랜덤으로 맞출 확률은 약 0.001894 정도에 불과하며,
+
+**한 라벨 당 학습 데이터가 최대 16개였던 것을 고려한다면** 나쁘지 않은 학습 결과라고 할 수 있다.
 
 ***
 
 ### 🔩 5-2. 교차 검증(Stratified 5-fold Cross Validation)
+모든 분류기의 test score가 train score보다 낮은 것으로 보아 과적합이 우려되어 교차검증을 실시해 보았다.
 <p align = "center">
 	<img src = "https://user-images.githubusercontent.com/68809022/147464637-5ce0cdf3-c0ec-4eb9-9c97-641135cb8f78.png" width="80%" height="80%">
 </p>
