@@ -80,7 +80,7 @@ DACON측에서 직업 라벨을 포함하여 제공한 25,000여 명의 설문�
 ### 🛰️ 3-2. 직업 대분류별 임금근로자 연봉
 ![image](https://user-images.githubusercontent.com/68809022/147536638-02d551be-b660-41da-b91f-f62f157a7822.png)
 
-### 🛰️ 3-2. 직업 대분류별 임금근로자 연봉 (한계값 연봉 1.5억 설정)
+### 🛰️ 3-2. 직업 대분류별 임금근로자 연봉 (상한 설정: 1.5억)
 ![image](https://user-images.githubusercontent.com/68809022/147536656-45c2680b-9e9b-48b2-a902-ae08e6f9e0a4.png)
 
 - 2018~2020년 모두 "경영·사무·금융·보험직"에 포함되는 97개의 직업들이 다른 직군들에 비해 연봉이 다소 높은 것을 확인 할 수 있다. 
@@ -312,7 +312,7 @@ Random Forest Classifier의 Test Accuracy가 5개의 모델 중 가장 뛰어난
 ***
 
 ### 📜 6-2. Radar Chart를 통한 시각화
-추천된 상위 10개의 직업에서 현직자가 아래의 요소들을 고려했을때 가장 좋은 직업 Best3를 Radar Chart를 활용하여 표현하엿다.
+추천된 상위 10개의 직업에서 현직자가 아래의 요소들을 고려했을때 가장 좋은 직업 Best3를 Radar Chart를 활용하여 표현하다.
 
 	- 업무 만족도(satisfaction)
 	- 직업 전망(prospects)
