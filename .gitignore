@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Private files
+*.pdf
+KNOW_2018_preprocessed.csv
+KNOW_2019_preprocessed.csv
+KNOW_2020.csv
